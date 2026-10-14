@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="yes"?><!-- sparkle-sign-warning:
+IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
+--><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>SubFuse Beta</title>
+        <item>
+            <title>0.9</title>
+            <pubDate>Thu, 15 Oct 2026 12:44:59 +1300</pubDate>
+            <link>https://github.com/cohenfreeland/SubFuse-Beta</link>
+            <sparkle:version>15</sparkle:version>
+            <sparkle:shortVersionString>0.9</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description><![CDATA[<h2>SubFuse Beta 0.9</h2>
+<p>Currently supports Claude, ChatGPT, and Cursor only.</p>
+<ul><li>Check for updates directly from the app menu or Settings.</li><li>Automatic update checks with a setting to turn them off.</li><li>Signed update downloads and feeds hosted on GitHub.</li><li>SubFuse Beta branding; existing local profiles remain compatible.</li></ul>
+<p>This beta requires Apple Silicon and macOS 14 or later. It is not Apple-notarized.</p>
+]]></description>
+            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v0.9/SubFuse-Beta-0.9-macOS-arm64.zip" length="1890388" type="application/octet-stream" sparkle:edSignature="3+h4T9lXKIbCKeMKOl97/1BiPYY/KD9Sv13Y6gmleB9l28MOUNXbki/tPMRIVkpyRfemg4TnzF8x5BBM6eyhBA=="></enclosure>
+        </item>
+    </channel>
+</rss><!-- sparkle-signatures:
+edSignature: KtM1QyRJHlJoYsVSUYMmEn+zEYzQ1ZBkKJbzcsdYQMutV75xs1O/u/wRTQdsQdpnAz2rE5ZDfziSxXJx8Hv8Dw==
+length: 1716
+-->

@@ -7,7 +7,7 @@ assignees: ''
 ---
 **App version:**
 **macOS version:**
-**Provider:** Claude / ChatGPT / Cursor
+**Provider:** Claude / ChatGPT / Cursor / Gemini (Antigravity)
 
 **What happened?**
 

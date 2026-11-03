@@ -1,5 +1,16 @@
 # Release notes
 
+## 0.12 — Gemini through Antigravity
+
+- Added Gemini through the running Antigravity desktop account service, bringing support to four providers: Claude, ChatGPT, Cursor, and Gemini.
+- Displays reported allowance pools, remaining usage, explicit reset times, and unavailable or outdated readings without inventing quota.
+- Supports individual, bulk, and optional background refresh, with account checks and preserved readings after failure.
+- Includes the existing subscription names, manual costs/currencies, renewals, trials, calendar reminders, local profiles, and freshness confirmation.
+- Keeps the Antigravity runtime token in memory; no Google sign-in or credentials are imported into SubFuse.
+- Passed automated and synthetic UI verification. Live Antigravity account verification is pending; older readings may be cached and the internal interface may change.
+
+Requires Apple Silicon and macOS 14 or newer. This beta is ad hoc signed, not Apple-notarized.
+
 ## 0.11 — Background usage refresh
 
 - Added optional automatic usage refresh in Settings, with 5-, 15-, 30-, and 60-minute choices saved per local profile. It starts off, with 15 minutes selected.

@@ -1,8 +1,8 @@
 <p align="center"><img src="assets/icon.png" width="110" alt="SubFuse Beta icon"></p>
 <h1 align="center">SubFuse Beta</h1>
 <p align="center"><strong>Your AI subscriptions. One clear view.</strong><br>Usage, costs, and renewals together on your Mac.</p>
-<p align="center"><strong>Currently compatible with Claude, ChatGPT, and Cursor only.</strong><br>Free download · Apple Silicon · macOS 14 or later · Proprietary software</p>
-<p align="center"><a href="https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.11">Download SubFuse Beta 0.11</a> · <a href="https://github.com/cohenfreeland/SubFuse-Beta/issues">Report a problem</a> · <a href="PRIVACY.md">Privacy</a></p>
+<p align="center"><strong>Currently compatible with Claude, ChatGPT, Cursor, and Gemini via Antigravity.</strong><br>Free download · Apple Silicon · macOS 14 or later · Proprietary software</p>
+<p align="center"><a href="https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.12">Download SubFuse Beta 0.12</a> · <a href="https://github.com/cohenfreeland/SubFuse-Beta/issues">Report a problem</a> · <a href="PRIVACY.md">Privacy</a></p>
 
 SubFuse Beta is a native Mac app for people juggling multiple AI subscriptions. See how much allowance remains, when usage resets, and what you spend each month. Give each subscription a useful name, keep accounts organized in local profiles, and plan upcoming payments in a calendar.
 
@@ -29,14 +29,16 @@ SubFuse Beta is a native Mac app for people juggling multiple AI subscriptions. 
 | ChatGPT | The Work / Codex allowance pool, with the usage windows your account reports | The ChatGPT/Codex desktop app installed and signed in to the matching account |
 | Cursor | Included usage reported by your account dashboard, including supported unified subscriptions | Sign in through SubFuse; use **Grok / unified sign-in** when your account uses that dashboard |
 
-**No other providers are supported yet.** Ordinary ChatGPT chat-message limits are not included. Unified Cursor usage may be shared with other eligible products; it is not a Cursor-only activity meter. Some accounts do not expose allowance readings, in which case SubFuse shows **Unavailable**.
+| Gemini via Antigravity | Allowance pools and resets reported by Antigravity, including model families when supplied | Keep Antigravity running and signed in to the matching Google account |
+
+These four providers are supported. Ordinary ChatGPT chat-message limits and Gemini consumer-chat/API limits are not included. Unified Cursor usage may be shared with other eligible products; it is not a Cursor-only activity meter. Some accounts do not expose allowance readings, in which case SubFuse shows **Unavailable**.
 
 ## Install on your Mac
 
-1. Download **SubFuse-Beta-0.11-macOS-arm64.zip** from the [0.11 release](https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.11). GitHub's automatic “Source code” downloads contain this public documentation, not the application.
+1. Download **SubFuse-Beta-0.12-macOS-arm64.zip** from the [0.12 release](https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.12). GitHub's automatic “Source code” downloads contain this public documentation, not the application.
 2. Unzip it and move **SubFuse Beta.app** into **Applications** before opening it.
 3. Open the app, choose **Sign in**, and create a local profile. This profile lives on your Mac; it is not a cloud account.
-4. Choose **Add subscription**, select Claude, ChatGPT, or Cursor, and follow the connection steps.
+4. Choose **Add subscription**, select Claude, ChatGPT, Cursor, or Gemini, and follow the connection steps.
 5. Open a subscription to enter its cost, currency, and renewal date.
 
 **This beta is not Apple-notarized or Developer ID signed.** macOS may initially block it. If you trust this download, first attempt to open it, then go to **System Settings → Privacy & Security → Open Anyway**, and confirm **Open**. See [Apple's opening instructions](https://support.apple.com/en-us/102445). Do not disable Gatekeeper globally. Managed Macs may not allow an exception.
@@ -45,9 +47,21 @@ Intel Macs, Windows, Linux, iPhone, and iPad are not supported.
 
 ## Refresh your subscriptions
 
-Choose **Update usage** in a subscription to get a fresh reading. Claude and Cursor first try the remembered account in the background; their connection window opens only if that attempt needs help. ChatGPT uses the matching account signed in to the desktop app.
+Choose **Update usage** in a subscription to get a fresh reading. Claude and Cursor first try the remembered account in the background; their connection window opens only if that attempt needs help. ChatGPT uses the matching account signed in to the desktop app. Gemini uses the matching account in the running Antigravity desktop app.
 
 Click **Refresh all** in the top-right status pill to try every subscription in the current profile. SubFuse saves the readings it can get and skips accounts needing input, without interrupting you with sign-in windows. If any fail, it says **Not all subscriptions could be refreshed.** Open an affected subscription and choose **Update usage** to reconnect. Failed updates preserve the last saved reading.
+
+## Connect Gemini through Antigravity
+
+Open Antigravity and sign in to your Google account, then choose **Add subscription → Gemini → Connect subscription** in SubFuse. Keep Antigravity running for individual, bulk, and optional background refreshes. If multiple distinct accounts are running, leave the intended one open and retry.
+
+Gemini supports custom names, manual costs/currencies, renewals, trials, calendar reminders, and **Nothing’s changed**, just like the other subscriptions. You can save multiple accounts; the matching account must be active in Antigravity to refresh each one. Failed or mismatched updates keep the previous reading.
+
+The bars represent Antigravity allowances, including other model families when reported, rather than Gemini consumer-chat/API limits or a separate Claude subscription. Missing data stays unavailable; older versions may return cached readings. **Checked Antigravity** is the time SubFuse checked the service, not an upstream measurement timestamp. Relative reset descriptions are shown as **At last check**; only explicit reset dates can trigger an expired-reset indicator.
+
+**Live Antigravity account verification is pending.** The integration passed automated parser, local HTTP, refresh, persistence, and UI tests using synthetic readings. Its internal desktop interface can change, and enterprise/project-specific entitlements are not claimed. Account matching uses a hash of the reported email: an email change needs a new subscription, and a reassigned organizational email cannot be distinguished.
+
+SubFuse does not own a Google sign-in. Removing Gemini or deleting a local profile does not sign out of Antigravity or cancel your plan; **Forget sign-in** applies to Claude and Cursor website sessions.
 
 ## Background usage refresh
 
@@ -67,7 +81,7 @@ Usage refresh is separate from the app-update checks described here.
 
 Version 0.9 and later include the built-in updater. It checks GitHub for updates while the app is running; automatic checks can be turned off in Settings. You choose when to download, install, and restart. Update packages are verified with SubFuse's signing key before extraction. These update signatures are separate from Apple's notarization.
 
-If you use 0.8 or earlier, install 0.11 once manually to get the updater. Quit the old app before replacing it. Existing saved profiles remain in the same local storage location. Keep one installed copy in Applications for future updates.
+If you use 0.8 or earlier, install 0.12 once manually to get the updater. Quit the old app before replacing it. Existing saved profiles remain in the same local storage location. Keep one installed copy in Applications for future updates.
 
 ## A few things to know during the beta
 
@@ -89,4 +103,4 @@ Local profiles help organize accounts; they are not password-protected security 
 
 SubFuse Beta is free to download and use, with proprietary source code. This public repository holds product documentation and release information only. See [LICENSE](LICENSE) and [third-party notices](THIRD-PARTY-NOTICES.txt).
 
-SubFuse is an independent project and is not affiliated with or endorsed by Anthropic, OpenAI, Cursor, or xAI. Product names belong to their respective owners.
+SubFuse is an independent project and is not affiliated with or endorsed by Anthropic, OpenAI, Google, Cursor, or xAI. Product names belong to their respective owners.

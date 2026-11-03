@@ -4,25 +4,24 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>SubFuse Beta</title>
         <item>
-            <title>0.13</title>
-            <pubDate>Tue, 03 Nov 2026 22:46:22 +1300</pubDate>
+            <title>0.13.1</title>
+            <pubDate>Wed, 04 Nov 2026 10:04:33 +1300</pubDate>
             <link>https://github.com/cohenfreeland/SubFuse-Beta</link>
-            <sparkle:version>21</sparkle:version>
-            <sparkle:shortVersionString>0.13</sparkle:shortVersionString>
+            <sparkle:version>22</sparkle:version>
+            <sparkle:shortVersionString>0.13.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description><![CDATA[<!doctype html>
-<html lang="en"><meta charset="utf-8"><title>SubFuse Beta 0.13</title>
-<h2>Saved usage on your desktop</h2>
-<p>Add <strong>SubFuse Beta → Saved usage</strong> from the macOS widget gallery. The small widget shows the subscription most in need of attention. Medium and large list more subscriptions from your active profile. Click a subscription to open its details.</p>
-<p>Remaining usage, freshness dots, and reset labels use readings already saved on your Mac. The widget makes no provider requests.</p>
-<p>The widget needs access to shared storage. If macOS withholds access for this ad hoc beta, open SubFuse to see your readings. The app continues using Application Support and retains the original file as a backup after a successful migration.</p>
+<html lang="en"><meta charset="utf-8"><title>SubFuse Beta 0.13.1</title>
+<h2>Saved usage widget fix</h2>
+<p>Fixes a crash that could keep the widget from loading. When shared storage is unavailable, the widget can read the saved SubFuse profile file in Application Support. It has read-only access to that one file.</p>
+<p>After updating, open SubFuse and select a profile with saved readings. To add the widget, Control-click the desktop, choose <strong>Edit Widgets</strong>, search for <strong>SubFuse</strong>, and add <strong>Saved usage</strong> in your preferred size.</p>
 </html>
 ]]></description>
-            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v0.13/SubFuse-Beta-0.13-macOS-arm64.zip" length="2258528" type="application/octet-stream" sparkle:edSignature="5ZFjyBsHRJoipwX56fnAUorjRtLJmTBssrQNw3Wj2dg7LyOEmRefkehF+9X8/cmKvi1sM6NkckBIAGuvtK+NBA=="></enclosure>
+            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v0.13.1/SubFuse-Beta-0.13.1-macOS-arm64.zip" length="2260787" type="application/octet-stream" sparkle:edSignature="uZrByLA/HLKnwiuCLctrdpKgT+YQx/+VPSTSIDyAoo2G5Ayo8fCi2VB2spu4L21fXB64C/aJ9E7eyLBoRR/4DA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: YY866yY6r0YYfLvq90RkoZnsIEjDdoGecEsuWpuL3NeH+C1tVqrpe5GUfLscGr55RM1fASX5lwzJcsTuNKOKBw==
-length: 2050
+edSignature: BpUqnKE5r+Oa0FwVLR/vlVptSJOEvlTJ4pO8+gxiPBpGtPlwT0EKvnG8B7wpIng2OfTpxELde5hVPVKVz/nODw==
+length: 1881
 -->

@@ -1,5 +1,11 @@
 # Release notes
 
+## 0.14 — Dark desktop widgets
+
+- All three sizes now share the SubFuse dashboard’s purple Fuse mark, charcoal surfaces, and provider icons.
+- Violet bars show remaining allowance. Expired and unavailable readings use a muted, dashed track.
+- The small widget highlights a single current reading. Medium and large widgets keep subscriptions in attention order.
+
 ## 0.13.1 — Saved usage widget fix
 
 - Fixed a startup crash that could prevent the widget from loading in any size.

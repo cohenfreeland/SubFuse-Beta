@@ -2,7 +2,7 @@
 <h1 align="center">SubFuse Beta</h1>
 <p align="center"><strong>Your AI subscriptions. One clear view.</strong><br>Usage, costs, and renewals together on your Mac.</p>
 <p align="center"><strong>Currently compatible with Claude, ChatGPT, Cursor, and Gemini via Antigravity.</strong><br>Free download · Apple Silicon · macOS 14 or later · Proprietary software</p>
-<p align="center"><a href="https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.13.1">Download SubFuse Beta 0.13.1</a> · <a href="https://github.com/cohenfreeland/SubFuse-Beta/issues">Report a problem</a> · <a href="PRIVACY.md">Privacy</a></p>
+<p align="center"><a href="https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.14">Download SubFuse Beta 0.14</a> · <a href="https://github.com/cohenfreeland/SubFuse-Beta/issues">Report a problem</a> · <a href="PRIVACY.md">Privacy</a></p>
 
 SubFuse Beta is a native Mac app for people juggling multiple AI subscriptions. See how much allowance remains, when usage resets, and what you spend each month. Give each subscription a useful name, keep accounts organized in local profiles, and plan upcoming payments in a calendar.
 
@@ -36,7 +36,7 @@ These four providers are supported. Ordinary ChatGPT chat-message limits and Gem
 
 ## Install on your Mac
 
-1. Download **SubFuse-Beta-0.13.1-macOS-arm64.zip** from the [0.13.1 release](https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.13.1). GitHub's automatic “Source code” downloads contain this public documentation, not the application.
+1. Download **SubFuse-Beta-0.14-macOS-arm64.zip** from the [0.14 release](https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.14). GitHub's automatic “Source code” downloads contain this public documentation, not the application.
 2. Unzip it and move **SubFuse Beta.app** into **Applications** before opening it.
 3. Open the app, choose **Sign in**, and create a local profile. This profile lives on your Mac; it is not a cloud account.
 4. Choose **Add subscription**, select Claude, ChatGPT, Cursor, or Gemini, and follow the connection steps.
@@ -50,9 +50,13 @@ Intel Macs, Windows, Linux, iPhone, and iPad are not supported.
 
 Open the macOS widget gallery and add **SubFuse Beta → Saved usage**. Small shows the subscription in your active profile whose reading most needs attention. Medium and Large show more subscriptions in the same order. Select a subscription to open its detail sheet.
 
+The dark widgets use the dashboard’s Fuse mark, provider icons, and violet bars to show how much allowance remains. A dashed track marks expired or unavailable readings. The small widget gives a single current reading more space.
+
+![Small, medium, and large dark SubFuse widgets showing sample subscriptions](assets/saved-usage-widgets.png)
+
 The widget reads usage already saved by the app. A freshness dot can change while SubFuse is closed, and a reading becomes **Outdated Data** when its saved reset time passes. Open the app to refresh the reading.
 
-If macOS can’t provide shared storage, the widget reads the saved SubFuse profile file in Application Support. This works automatically in 0.13.1. The widget has read-only access to that one fallback file.
+If macOS can’t provide shared storage, the widget reads the saved SubFuse profile file in Application Support. The widget has read-only access to that one fallback file.
 
 ## Refresh your subscriptions
 
@@ -90,7 +94,7 @@ Usage refresh is separate from the app-update checks described here.
 
 Version 0.9 and later include the built-in updater. It checks GitHub for updates while the app is running; automatic checks can be turned off in Settings. You choose when to download, install, and restart. Update packages are verified with SubFuse's signing key before extraction. These update signatures are separate from Apple's notarization.
 
-If you use 0.8 or earlier, install 0.13.1 once manually to get the updater. Quit the old app before replacing it. Existing saved profiles carry forward automatically. Keep one installed copy in Applications for future updates.
+If you use 0.8 or earlier, install 0.14 once manually to get the updater. Quit the old app before replacing it. Existing saved profiles carry forward automatically. Keep one installed copy in Applications for future updates.
 
 ## A few things to know during the beta
 

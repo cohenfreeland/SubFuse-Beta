@@ -6,7 +6,7 @@ When macOS grants shared storage access, SubFuse keeps the live file at `SubFuse
 
 When the shared profile file is unavailable, the widget can read the existing `~/Library/Application Support/SubFuse/state.json` file. Its additional permission is read-only and covers that single file.
 
-The sandboxed desktop widget reads the active profile’s saved subscription names, provider and plan labels, usage readings, and timestamps. Its display omits account labels, email addresses, account keys, and sign-in identifiers. The widget has no network entitlement and makes no provider requests.
+The sandboxed desktop widget reads the active profile’s saved subscription names, provider and plan labels, usage readings, and timestamps. Its display omits account labels, email addresses, account keys, and sign-in identifiers. The provider icons and allowance bars are drawn locally from the same saved readings. The widget has no network entitlement and makes no provider requests.
 
 Claude and Cursor sign-ins use persistent WebKit website data stored separately on this Mac. SubFuse isolates sessions by local profile and account. It does not import credentials from Cursor, Claude Desktop, another browser, or the Keychain. ChatGPT collection asks the installed account service for its signed-in identity and allowance readings.
 

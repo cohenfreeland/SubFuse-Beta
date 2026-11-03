@@ -4,24 +4,24 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>SubFuse Beta</title>
         <item>
-            <title>0.13.1</title>
-            <pubDate>Wed, 04 Nov 2026 10:04:33 +1300</pubDate>
+            <title>0.14</title>
+            <pubDate>Wed, 04 Nov 2026 11:31:00 +1300</pubDate>
             <link>https://github.com/cohenfreeland/SubFuse-Beta</link>
-            <sparkle:version>22</sparkle:version>
-            <sparkle:shortVersionString>0.13.1</sparkle:shortVersionString>
+            <sparkle:version>23</sparkle:version>
+            <sparkle:shortVersionString>0.14</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description><![CDATA[<!doctype html>
-<html lang="en"><meta charset="utf-8"><title>SubFuse Beta 0.13.1</title>
-<h2>Saved usage widget fix</h2>
-<p>Fixes a crash that could keep the widget from loading. When shared storage is unavailable, the widget can read the saved SubFuse profile file in Application Support. It has read-only access to that one file.</p>
-<p>After updating, open SubFuse and select a profile with saved readings. To add the widget, Control-click the desktop, choose <strong>Edit Widgets</strong>, search for <strong>SubFuse</strong>, and add <strong>Saved usage</strong> in your preferred size.</p>
+<html lang="en"><meta charset="utf-8"><title>SubFuse Beta 0.14</title>
+<h2>A dark look for Saved usage</h2>
+<p>All three macOS widget sizes now share the dashboard’s Fuse mark, charcoal surfaces, provider icons, and violet allowance bars. The small widget gives a single current reading more room. Expired or unavailable readings have a dashed track.</p>
+<p>To add a widget, Control-click the desktop, choose <strong>Edit Widgets</strong>, search for <strong>SubFuse</strong>, and add <strong>Saved usage</strong>.</p>
 </html>
 ]]></description>
-            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v0.13.1/SubFuse-Beta-0.13.1-macOS-arm64.zip" length="2260787" type="application/octet-stream" sparkle:edSignature="uZrByLA/HLKnwiuCLctrdpKgT+YQx/+VPSTSIDyAoo2G5Ayo8fCi2VB2spu4L21fXB64C/aJ9E7eyLBoRR/4DA=="></enclosure>
+            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v0.14/SubFuse-Beta-0.14-macOS-arm64.zip" length="2308597" type="application/octet-stream" sparkle:edSignature="518faZfMj2fp7jJGat0SfO+mKzicxctpGz2joNFsziuFb9BIpCs8oqjKaPdubbduvrH5GzjoraIb7mRzObwzDQ=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: BpUqnKE5r+Oa0FwVLR/vlVptSJOEvlTJ4pO8+gxiPBpGtPlwT0EKvnG8B7wpIng2OfTpxELde5hVPVKVz/nODw==
-length: 1881
+edSignature: feh5M81gQP61n0C/rt/o9tT2tIM3TaPzLGXZ/2h42cZAwUbojmGbE4bLRShKUS3JVQG3tFC+nBbpFTIe2u+GBQ==
+length: 1814
 -->

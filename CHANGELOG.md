@@ -1,5 +1,14 @@
 # Release notes
 
+## 0.11 — Background usage refresh
+
+- Added optional automatic usage refresh in Settings, with 5-, 15-, 30-, and 60-minute choices saved per local profile. It starts off, with 15 minutes selected.
+- Refreshes the active profile while SubFuse is running, including when another app has focus. Sleep and quitting pause refresh; overdue intervals produce one catch-up attempt.
+- Added passive status, attempt counts, and the last fully successful refresh time. Automatic attempts never open sign-in windows.
+- Kept saved readings and timestamps intact after provider or save failures, with bounded retry backoff.
+- Prevented overlap with manual refresh and connection windows, and rejected late results after cancellation or profile changes.
+- Preserved existing profiles, remembered sign-ins, costs, renewals, and signed app updates.
+
 ## 0.10.1 — Cursor refresh repair
 
 - Fixed a false sign-in prompt that prevented Cursor subscriptions from refreshing after the account dashboard changed.

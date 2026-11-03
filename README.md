@@ -2,7 +2,7 @@
 <h1 align="center">SubFuse Beta</h1>
 <p align="center"><strong>Your AI subscriptions. One clear view.</strong><br>Usage, costs, and renewals together on your Mac.</p>
 <p align="center"><strong>Currently compatible with Claude, ChatGPT, and Cursor only.</strong><br>Free download · Apple Silicon · macOS 14 or later · Proprietary software</p>
-<p align="center"><a href="https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.10.1">Download SubFuse Beta 0.10.1</a> · <a href="https://github.com/cohenfreeland/SubFuse-Beta/issues">Report a problem</a> · <a href="PRIVACY.md">Privacy</a></p>
+<p align="center"><a href="https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.11">Download SubFuse Beta 0.11</a> · <a href="https://github.com/cohenfreeland/SubFuse-Beta/issues">Report a problem</a> · <a href="PRIVACY.md">Privacy</a></p>
 
 SubFuse Beta is a native Mac app for people juggling multiple AI subscriptions. See how much allowance remains, when usage resets, and what you spend each month. Give each subscription a useful name, keep accounts organized in local profiles, and plan upcoming payments in a calendar.
 
@@ -13,6 +13,7 @@ SubFuse Beta is a native Mac app for people juggling multiple AI subscriptions. 
 - **See remaining usage** across supported accounts, with reset times and clear indicators when readings need a refresh.
 - **Refresh with one click** using remembered Claude and Cursor sign-ins, with connection steps shown only when needed.
 - **Refresh all subscriptions** from the top-right status pill. Successful accounts update even when another needs attention.
+- **Refresh usage automatically** every 5, 15, 30, or 60 minutes while SubFuse is running, with optional settings for each local profile.
 - **Keep multiple accounts together**, with custom names and the provider's plan shown separately.
 - **Track your spending** with manually entered amounts and currencies. Different currencies stay separate.
 - **Plan renewals and trials** with a calendar and optional Mac notifications.
@@ -32,7 +33,7 @@ SubFuse Beta is a native Mac app for people juggling multiple AI subscriptions. 
 
 ## Install on your Mac
 
-1. Download **SubFuse-Beta-0.10.1-macOS-arm64.zip** from the [0.10.1 release](https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.10.1). GitHub's automatic “Source code” downloads contain this public documentation, not the application.
+1. Download **SubFuse-Beta-0.11-macOS-arm64.zip** from the [0.11 release](https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.11). GitHub's automatic “Source code” downloads contain this public documentation, not the application.
 2. Unzip it and move **SubFuse Beta.app** into **Applications** before opening it.
 3. Open the app, choose **Sign in**, and create a local profile. This profile lives on your Mac; it is not a cloud account.
 4. Choose **Add subscription**, select Claude, ChatGPT, or Cursor, and follow the connection steps.
@@ -48,11 +49,25 @@ Choose **Update usage** in a subscription to get a fresh reading. Claude and Cur
 
 Click **Refresh all** in the top-right status pill to try every subscription in the current profile. SubFuse saves the readings it can get and skips accounts needing input, without interrupting you with sign-in windows. If any fail, it says **Not all subscriptions could be refreshed.** Open an affected subscription and choose **Update usage** to reconnect. Failed updates preserve the last saved reading.
 
+## Background usage refresh
+
+Open **Settings → Background usage refresh** and turn on **Automatically refresh this profile**. Choose **5, 15, 30, or 60 minutes**. The feature is off by default, with 15 minutes selected, and each local profile remembers its own choice.
+
+Enabling starts a quiet refresh when idle. It continues while SubFuse is running, even when another app has focus. It pauses when your Mac sleeps and stops when you quit SubFuse. Returning after missed intervals makes at most one overdue attempt; it does not replay them all or wake your Mac. Timing is approximate, and repeated failures retry less often.
+
+Only the active profile is refreshed. Manual refreshes and connection windows take precedence. Automatic refresh never opens a sign-in window; successful accounts update and failed accounts keep their previous readings. Settings shows the last attempt, how many subscriptions refreshed, and the last fully successful refresh. Open an affected subscription and choose **Update usage** to reconnect.
+
+Turn the toggle off to stop scheduled and in-progress automatic work. Your selected frequency is retained. Automatic refresh makes periodic requests to your providers; preferences and readings stay on this Mac.
+
+![Background usage refresh settings, off by default](assets/background-refresh.png)
+
 ## Staying up to date
+
+Usage refresh is separate from the app-update checks described here.
 
 Version 0.9 and later include the built-in updater. It checks GitHub for updates while the app is running; automatic checks can be turned off in Settings. You choose when to download, install, and restart. Update packages are verified with SubFuse's signing key before extraction. These update signatures are separate from Apple's notarization.
 
-If you use 0.8 or earlier, install 0.10.1 once manually to get the updater. Quit the old app before replacing it. Existing saved profiles remain in the same local storage location. Keep one installed copy in Applications for future updates.
+If you use 0.8 or earlier, install 0.11 once manually to get the updater. Quit the old app before replacing it. Existing saved profiles remain in the same local storage location. Keep one installed copy in Applications for future updates.
 
 ## A few things to know during the beta
 

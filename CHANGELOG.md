@@ -1,5 +1,11 @@
 # Release notes
 
+## 0.13.1 — Saved usage widget fix
+
+- Fixed a startup crash that could prevent the widget from loading in any size.
+- The widget now reads the existing SubFuse profile file when shared storage is unavailable or profile migration fails. A signed-out profile still shows an empty widget.
+- The fallback is automatic and grants read-only access to the single saved file in Application Support.
+
 ## 0.13 — Saved usage widget
 
 - Add a small, medium, or large macOS widget to see saved allowances for the active profile. Subscriptions needing attention appear first.

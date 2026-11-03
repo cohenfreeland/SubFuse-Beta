@@ -4,19 +4,25 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>SubFuse Beta</title>
         <item>
-            <title>0.12.1</title>
-            <pubDate>Tue, 03 Nov 2026 21:51:57 +1300</pubDate>
+            <title>0.13</title>
+            <pubDate>Tue, 03 Nov 2026 22:46:22 +1300</pubDate>
             <link>https://github.com/cohenfreeland/SubFuse-Beta</link>
-            <sparkle:version>20</sparkle:version>
-            <sparkle:shortVersionString>0.12.1</sparkle:shortVersionString>
+            <sparkle:version>21</sparkle:version>
+            <sparkle:shortVersionString>0.13</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[<!doctype html><html lang="en"><head><meta charset="utf-8"><title>SubFuse Beta 0.12.1</title></head><body><h1>Antigravity connection repair</h1><p>Fixes Gemini connections when Antigravity's standalone desktop account service uses local HTTP without extension-server flags. SubFuse now tries HTTPS followed by HTTP only on verified listening ports owned by the running Antigravity process.</p><p>Account checks, loopback-only requests, runtime-token handling, and saved readings remain protected. No Google sign-in credentials are imported.</p><p>Live-tested with Antigravity 2.28.2 and a Starter Quota account: adding Gemini, matching both allowance pools to Antigravity, refreshing, and refreshing again after restarting SubFuse. Other plans and versions remain unverified.</p><p>Requires Apple Silicon and macOS 14+. This beta is ad hoc signed, not Apple-notarized.</p></body></html>
+            <description><![CDATA[<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>SubFuse Beta 0.13</title>
+<h2>Saved usage on your desktop</h2>
+<p>Add <strong>SubFuse Beta → Saved usage</strong> from the macOS widget gallery. The small widget shows the subscription most in need of attention. Medium and large list more subscriptions from your active profile. Click a subscription to open its details.</p>
+<p>Remaining usage, freshness dots, and reset labels use readings already saved on your Mac. The widget makes no provider requests.</p>
+<p>The widget needs access to shared storage. If macOS withholds access for this ad hoc beta, open SubFuse to see your readings. The app continues using Application Support and retains the original file as a backup after a successful migration.</p>
+</html>
 ]]></description>
-            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v0.12.1/SubFuse-Beta-0.12.1-macOS-arm64.zip" length="2062708" type="application/octet-stream" sparkle:edSignature="jq3HAfHfxRMZaT3wh9uWHkfKNolgKZZmkqjkXBV6bvTbhFsMjaQH+8/+OcDiBldZ2Lwcskb1kECdlIFkfDZLBw=="></enclosure>
+            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v0.13/SubFuse-Beta-0.13-macOS-arm64.zip" length="2258528" type="application/octet-stream" sparkle:edSignature="5ZFjyBsHRJoipwX56fnAUorjRtLJmTBssrQNw3Wj2dg7LyOEmRefkehF+9X8/cmKvi1sM6NkckBIAGuvtK+NBA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: T75X7/KqdjQMhPQhVMZOeO117Z89vKKXtCKpNKGO0EvUCg5WhN+YMtNcx7I9NJWUSu4SdZ3YGZWiL2vbkthLAQ==
-length: 2164
+edSignature: YY866yY6r0YYfLvq90RkoZnsIEjDdoGecEsuWpuL3NeH+C1tVqrpe5GUfLscGr55RM1fASX5lwzJcsTuNKOKBw==
+length: 2050
 -->

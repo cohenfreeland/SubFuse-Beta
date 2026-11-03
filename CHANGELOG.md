@@ -1,5 +1,11 @@
 # Release notes
 
+## 0.13 — Saved usage widget
+
+- Add a small, medium, or large macOS widget to see saved allowances for the active profile. Subscriptions needing attention appear first.
+- Open a subscription’s detail sheet directly from the widget. Freshness dots and reset labels age from saved timestamps while the app is closed.
+- Use a shared container when macOS grants access. The app retains Application Support as its fallback and preserves the original profile file after migration.
+
 ## 0.12.1 — Antigravity connection repair
 
 - Fixed Gemini connection failures with Antigravity's standalone desktop runtime by trying authenticated HTTP after HTTPS on verified process-owned local listeners.

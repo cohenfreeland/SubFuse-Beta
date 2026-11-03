@@ -2,7 +2,7 @@
 <h1 align="center">SubFuse Beta</h1>
 <p align="center"><strong>Your AI subscriptions. One clear view.</strong><br>Usage, costs, and renewals together on your Mac.</p>
 <p align="center"><strong>Currently compatible with Claude, ChatGPT, Cursor, and Gemini via Antigravity.</strong><br>Free download · Apple Silicon · macOS 14 or later · Proprietary software</p>
-<p align="center"><a href="https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.12.1">Download SubFuse Beta 0.12.1</a> · <a href="https://github.com/cohenfreeland/SubFuse-Beta/issues">Report a problem</a> · <a href="PRIVACY.md">Privacy</a></p>
+<p align="center"><a href="https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.13">Download SubFuse Beta 0.13</a> · <a href="https://github.com/cohenfreeland/SubFuse-Beta/issues">Report a problem</a> · <a href="PRIVACY.md">Privacy</a></p>
 
 SubFuse Beta is a native Mac app for people juggling multiple AI subscriptions. See how much allowance remains, when usage resets, and what you spend each month. Give each subscription a useful name, keep accounts organized in local profiles, and plan upcoming payments in a calendar.
 
@@ -11,6 +11,7 @@ SubFuse Beta is a native Mac app for people juggling multiple AI subscriptions. 
 ## What you can do
 
 - **See remaining usage** across supported accounts, with reset times and clear indicators when readings need a refresh.
+- **Check saved usage on your desktop** with a small, medium, or large widget. Select a subscription to open its details in SubFuse.
 - **Refresh with one click** using remembered Claude and Cursor sign-ins, with connection steps shown only when needed.
 - **Refresh all subscriptions** from the top-right status pill. Successful accounts update even when another needs attention.
 - **Refresh usage automatically** every 5, 15, 30, or 60 minutes while SubFuse is running, with optional settings for each local profile.
@@ -35,7 +36,7 @@ These four providers are supported. Ordinary ChatGPT chat-message limits and Gem
 
 ## Install on your Mac
 
-1. Download **SubFuse-Beta-0.12.1-macOS-arm64.zip** from the [0.12.1 release](https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.12.1). GitHub's automatic “Source code” downloads contain this public documentation, not the application.
+1. Download **SubFuse-Beta-0.13-macOS-arm64.zip** from the [0.13 release](https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.13). GitHub's automatic “Source code” downloads contain this public documentation, not the application.
 2. Unzip it and move **SubFuse Beta.app** into **Applications** before opening it.
 3. Open the app, choose **Sign in**, and create a local profile. This profile lives on your Mac; it is not a cloud account.
 4. Choose **Add subscription**, select Claude, ChatGPT, Cursor, or Gemini, and follow the connection steps.
@@ -44,6 +45,14 @@ These four providers are supported. Ordinary ChatGPT chat-message limits and Gem
 **This beta is not Apple-notarized or Developer ID signed.** macOS may initially block it. If you trust this download, first attempt to open it, then go to **System Settings → Privacy & Security → Open Anyway**, and confirm **Open**. See [Apple's opening instructions](https://support.apple.com/en-us/102445). Do not disable Gatekeeper globally. Managed Macs may not allow an exception.
 
 Intel Macs, Windows, Linux, iPhone, and iPad are not supported.
+
+## Saved usage widget
+
+Open the macOS widget gallery and add **SubFuse Beta → Saved usage**. Small shows the subscription in your active profile whose reading most needs attention. Medium and Large show more subscriptions in the same order. Select a subscription to open its detail sheet.
+
+The widget reads usage already saved by the app. A freshness dot can change while SubFuse is closed, and a reading becomes **Outdated Data** when its saved reset time passes. Open the app to refresh the reading.
+
+The widget needs access to the shared app-group folder. During testing, macOS created that folder but denied read access to the ad hoc signed probe. If the widget reports that shared storage is unavailable, open SubFuse to see your readings. The app continues using Application Support.
 
 ## Refresh your subscriptions
 
@@ -81,7 +90,7 @@ Usage refresh is separate from the app-update checks described here.
 
 Version 0.9 and later include the built-in updater. It checks GitHub for updates while the app is running; automatic checks can be turned off in Settings. You choose when to download, install, and restart. Update packages are verified with SubFuse's signing key before extraction. These update signatures are separate from Apple's notarization.
 
-If you use 0.8 or earlier, install 0.12.1 once manually to get the updater. Quit the old app before replacing it. Existing saved profiles remain in the same local storage location. Keep one installed copy in Applications for future updates.
+If you use 0.8 or earlier, install 0.13 once manually to get the updater. Quit the old app before replacing it. Existing saved profiles carry forward automatically. Keep one installed copy in Applications for future updates.
 
 ## A few things to know during the beta
 

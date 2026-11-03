@@ -1,6 +1,10 @@
 # Privacy notes
 
-SubFuse Beta stores profiles, subscription labels, account display labels, hashed account identifiers, usage snapshots, manually entered costs, renewal schedules, and per-profile background refresh preferences and attempt summaries locally at `~/Library/Application Support/SubFuse/state.json`. Passwords and authentication tokens are not stored in that JSON file.
+SubFuse Beta stores profiles, subscription labels, account display labels, hashed account identifiers, usage snapshots, manually entered costs, renewal schedules, and per-profile background refresh preferences and attempt summaries in a local `state.json` file. Passwords and authentication tokens are not stored in that JSON file.
+
+When macOS grants shared storage access, SubFuse keeps the live file at `SubFuse/state.json` inside the `group.app.subfuse.local` container. The app verifies the migrated copy and retains `~/Library/Application Support/SubFuse/state.json` as a backup. Application Support remains the live location if the container is unavailable or migration fails.
+
+The sandboxed desktop widget reads the active profile’s saved subscription names, provider and plan labels, usage readings, and timestamps. Its display omits account labels, email addresses, account keys, and sign-in identifiers. The widget has no network entitlement and makes no provider requests.
 
 Claude and Cursor sign-ins use persistent WebKit website data stored separately on this Mac. SubFuse isolates sessions by local profile and account. It does not import credentials from Cursor, Claude Desktop, another browser, or the Keychain. ChatGPT collection asks the installed account service for its signed-in identity and allowance readings.
 

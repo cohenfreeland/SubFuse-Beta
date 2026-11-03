@@ -4,18 +4,30 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>SubFuse Beta</title>
         <item>
-            <title>0.10.1</title>
-            <pubDate>Fri, 30 Oct 2026 11:35:02 +1300</pubDate>
+            <title>0.11</title>
+            <pubDate>Tue, 03 Nov 2026 19:22:03 +1300</pubDate>
             <link>https://github.com/cohenfreeland/SubFuse-Beta</link>
-            <sparkle:version>17</sparkle:version>
-            <sparkle:shortVersionString>0.10.1</sparkle:shortVersionString>
+            <sparkle:version>18</sparkle:version>
+            <sparkle:shortVersionString>0.11</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[<!doctype html><html><head><meta charset="utf-8"><title>SubFuse Beta 0.10.1</title></head><body><h1>SubFuse Beta 0.10.1</h1><p>Fixes Cursor subscriptions asking you to sign in again even when the account dashboard is already signed in.</p><ul><li>Uses Cursor’s current account-check route while preserving remembered accounts and saved subscription details.</li><li>Includes one-click Claude and Cursor updates and Refresh all.</li><li>Failed refreshes preserve the last successful reading.</li></ul><p>Requires Apple Silicon and macOS 14 or later. This beta is not Apple-notarized.</p></body></html>]]></description>
-            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v0.10.1/SubFuse-Beta-0.10.1-macOS-arm64.zip" length="1937509" type="application/octet-stream" sparkle:edSignature="43NJACxVDtO+JSNC1ymo0nnFOr9CVzjdbkUdEhwQxCBPuMjH72rxrxqJ3UVnPHm6PonuWwxRRQLycUQ061AoDQ=="></enclosure>
+            <description><![CDATA[<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SubFuse Beta 0.11</title></head><body>
+<h1>Background usage refresh</h1>
+<p>Turn on Background usage refresh in Settings to refresh the active local profile every 5, 15, 30, or 60 minutes. It starts off, with 15 minutes selected, and each profile remembers its own preferences.</p>
+<ul>
+<li>Refreshes quietly while SubFuse is running, including when another app has focus. Pauses for sleep and stops when you quit.</li>
+<li>Shows attempt counts and the last fully successful refresh. Failed updates preserve saved readings and retry less often.</li>
+<li>Prevents overlapping manual and automatic operations, and rejects late results after cancellation or profile changes.</li>
+<li>Preserves existing profiles, remembered Claude and Cursor sign-ins, costs, and renewals.</li>
+</ul>
+<p>Supports Claude, ChatGPT, and Cursor. Requires Apple Silicon and macOS 14 or later. This beta is not Apple-notarized.</p>
+</body></html>
+]]></description>
+            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v0.11/SubFuse-Beta-0.11-macOS-arm64.zip" length="1998230" type="application/octet-stream" sparkle:edSignature="5HrDJ1IKErQEtpSRWPz1qJu/dwnURjkKNToiZDTmCwSaH42wgBIEnlkAT6LsS9TyXUBPo6eiC7yoSD91NUvbBw=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: /hChOuSDla4zak6RAKch2gAl7g1E2D11muSYm1GBXGAlcFeg3rKRBty/FfrPrnwo76qIsAmGeOzFWWYLwZLDCA==
-length: 1879
+edSignature: 7kr+PBbfpxvxGfcDSDm4Mnqp5khWSAbUGUHBd3QotvlbimrDfrU/Ga0vfht4gpaUd4XjdxrCX4DN/Bpvcjo7Bg==
+length: 2257
 -->

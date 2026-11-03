@@ -4,30 +4,18 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>SubFuse Beta</title>
         <item>
-            <title>0.11</title>
-            <pubDate>Tue, 03 Nov 2026 19:22:03 +1300</pubDate>
+            <title>0.12</title>
+            <pubDate>Tue, 03 Nov 2026 21:01:19 +1300</pubDate>
             <link>https://github.com/cohenfreeland/SubFuse-Beta</link>
-            <sparkle:version>18</sparkle:version>
-            <sparkle:shortVersionString>0.11</sparkle:shortVersionString>
+            <sparkle:version>19</sparkle:version>
+            <sparkle:shortVersionString>0.12</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><title>SubFuse Beta 0.11</title></head><body>
-<h1>Background usage refresh</h1>
-<p>Turn on Background usage refresh in Settings to refresh the active local profile every 5, 15, 30, or 60 minutes. It starts off, with 15 minutes selected, and each profile remembers its own preferences.</p>
-<ul>
-<li>Refreshes quietly while SubFuse is running, including when another app has focus. Pauses for sleep and stops when you quit.</li>
-<li>Shows attempt counts and the last fully successful refresh. Failed updates preserve saved readings and retry less often.</li>
-<li>Prevents overlapping manual and automatic operations, and rejects late results after cancellation or profile changes.</li>
-<li>Preserves existing profiles, remembered Claude and Cursor sign-ins, costs, and renewals.</li>
-</ul>
-<p>Supports Claude, ChatGPT, and Cursor. Requires Apple Silicon and macOS 14 or later. This beta is not Apple-notarized.</p>
-</body></html>
-]]></description>
-            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v0.11/SubFuse-Beta-0.11-macOS-arm64.zip" length="1998230" type="application/octet-stream" sparkle:edSignature="5HrDJ1IKErQEtpSRWPz1qJu/dwnURjkKNToiZDTmCwSaH42wgBIEnlkAT6LsS9TyXUBPo6eiC7yoSD91NUvbBw=="></enclosure>
+            <description><![CDATA[<!doctype html><html lang="en"><head><meta charset="utf-8"><title>SubFuse Beta 0.12</title></head><body><h1>Gemini through Antigravity</h1><p>SubFuse now supports four providers: ChatGPT, Claude, Cursor, and Gemini through Antigravity.</p><ul><li>Connect Gemini using the signed-in Antigravity desktop app and view its reported allowance pools and resets.</li><li>Use custom names, costs and currencies, renewals, trials, calendar reminders, and freshness confirmation.</li><li>Refresh individually, with Refresh all, or on your profile's optional background schedule.</li><li>Account checks protect saved subscriptions; failed refreshes preserve the last reading.</li></ul><p>Keep Antigravity running and signed in to the account you want to refresh. Allowances are those reported by Antigravity, not Gemini consumer-chat or API limits. Older versions may provide cached readings.</p><p>The integration passed automated and synthetic UI tests; live Antigravity account verification is pending. Its internal desktop interface may change. Requires Apple Silicon and macOS 14+. This beta is ad hoc signed, not Apple-notarized.</p></body></html>]]></description>
+            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v0.12/SubFuse-Beta-0.12-macOS-arm64.zip" length="2062434" type="application/octet-stream" sparkle:edSignature="kucJeGr//e5cMB85DfnlmEN/xXHadVCcOqEOvLxOwQKRYsC+QeCJ5Ah/MLQUi8POG/7Io41OpVRrwHunkTWxBw=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: 7kr+PBbfpxvxGfcDSDm4Mnqp5khWSAbUGUHBd3QotvlbimrDfrU/Ga0vfht4gpaUd4XjdxrCX4DN/Bpvcjo7Bg==
-length: 2257
+edSignature: 1VtJmWyZWwIqg+g/FTE3iwjaSnW140mnfv44VXCVENb4LYzUZAFZ8pb/8q7glOuOV5QFtqtcSSNEufbk2bdgBg==
+length: 2411
 -->

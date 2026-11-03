@@ -4,18 +4,19 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>SubFuse Beta</title>
         <item>
-            <title>0.12</title>
-            <pubDate>Tue, 03 Nov 2026 21:01:19 +1300</pubDate>
+            <title>0.12.1</title>
+            <pubDate>Tue, 03 Nov 2026 21:51:57 +1300</pubDate>
             <link>https://github.com/cohenfreeland/SubFuse-Beta</link>
-            <sparkle:version>19</sparkle:version>
-            <sparkle:shortVersionString>0.12</sparkle:shortVersionString>
+            <sparkle:version>20</sparkle:version>
+            <sparkle:shortVersionString>0.12.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[<!doctype html><html lang="en"><head><meta charset="utf-8"><title>SubFuse Beta 0.12</title></head><body><h1>Gemini through Antigravity</h1><p>SubFuse now supports four providers: ChatGPT, Claude, Cursor, and Gemini through Antigravity.</p><ul><li>Connect Gemini using the signed-in Antigravity desktop app and view its reported allowance pools and resets.</li><li>Use custom names, costs and currencies, renewals, trials, calendar reminders, and freshness confirmation.</li><li>Refresh individually, with Refresh all, or on your profile's optional background schedule.</li><li>Account checks protect saved subscriptions; failed refreshes preserve the last reading.</li></ul><p>Keep Antigravity running and signed in to the account you want to refresh. Allowances are those reported by Antigravity, not Gemini consumer-chat or API limits. Older versions may provide cached readings.</p><p>The integration passed automated and synthetic UI tests; live Antigravity account verification is pending. Its internal desktop interface may change. Requires Apple Silicon and macOS 14+. This beta is ad hoc signed, not Apple-notarized.</p></body></html>]]></description>
-            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v0.12/SubFuse-Beta-0.12-macOS-arm64.zip" length="2062434" type="application/octet-stream" sparkle:edSignature="kucJeGr//e5cMB85DfnlmEN/xXHadVCcOqEOvLxOwQKRYsC+QeCJ5Ah/MLQUi8POG/7Io41OpVRrwHunkTWxBw=="></enclosure>
+            <description><![CDATA[<!doctype html><html lang="en"><head><meta charset="utf-8"><title>SubFuse Beta 0.12.1</title></head><body><h1>Antigravity connection repair</h1><p>Fixes Gemini connections when Antigravity's standalone desktop account service uses local HTTP without extension-server flags. SubFuse now tries HTTPS followed by HTTP only on verified listening ports owned by the running Antigravity process.</p><p>Account checks, loopback-only requests, runtime-token handling, and saved readings remain protected. No Google sign-in credentials are imported.</p><p>Live-tested with Antigravity 2.28.2 and a Starter Quota account: adding Gemini, matching both allowance pools to Antigravity, refreshing, and refreshing again after restarting SubFuse. Other plans and versions remain unverified.</p><p>Requires Apple Silicon and macOS 14+. This beta is ad hoc signed, not Apple-notarized.</p></body></html>
+]]></description>
+            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v0.12.1/SubFuse-Beta-0.12.1-macOS-arm64.zip" length="2062708" type="application/octet-stream" sparkle:edSignature="jq3HAfHfxRMZaT3wh9uWHkfKNolgKZZmkqjkXBV6bvTbhFsMjaQH+8/+OcDiBldZ2Lwcskb1kECdlIFkfDZLBw=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: 1VtJmWyZWwIqg+g/FTE3iwjaSnW140mnfv44VXCVENb4LYzUZAFZ8pb/8q7glOuOV5QFtqtcSSNEufbk2bdgBg==
-length: 2411
+edSignature: T75X7/KqdjQMhPQhVMZOeO117Z89vKKXtCKpNKGO0EvUCg5WhN+YMtNcx7I9NJWUSu4SdZ3YGZWiL2vbkthLAQ==
+length: 2164
 -->

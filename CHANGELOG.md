@@ -1,5 +1,12 @@
 # Release notes
 
+## 0.12.1 — Antigravity connection repair
+
+- Fixed Gemini connection failures with Antigravity's standalone desktop runtime by trying authenticated HTTP after HTTPS on verified process-owned local listeners.
+- Preserved loopback-only requests, in-memory tokens, extension-token selection, account checks, and saved readings after failure.
+- Verified live with Antigravity 2.28.2 and a Starter Quota account: both allowance pools matched, refresh succeeded, and the subscription persisted across restart. Other plans and versions remain unverified.
+- Passed 89 Gemini, 59 refresh, and 146 background-refresh checks, plus the full core Swift and production JavaScript suites and signed release verification.
+
 ## 0.12 — Gemini through Antigravity
 
 - Added Gemini through the running Antigravity desktop account service, bringing support to four providers: Claude, ChatGPT, Cursor, and Gemini.

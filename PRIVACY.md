@@ -25,3 +25,12 @@ There is no SubFuse cloud account, cross-device sync, or built-in analytics serv
 Use **Forget sign-in** to remove a Claude or Cursor website session while retaining the saved subscription. Removing the account's last subscription or deleting its profile also cleans up its website session. Signing out of a local profile retains it for later use. Removing a SubFuse subscription does not cancel the provider's plan.
 
 GitHub issues are public. Do not post authentication data or personal account information there.
+
+
+## Portable profile files
+
+When you choose **Copy to another Mac…**, SubFuse reads only the chosen profile and its referenced Claude/Cursor website-store directories. The resulting `.subfuse` file contains the profile’s subscriptions, saved readings, billing details and those website sessions. ChatGPT and Gemini desktop credentials are not included. SubFuse never uploads the file; you choose its destination and copy it yourself. There is no account or sync service.
+
+The archive uses AES-GCM authenticated encryption with a password-derived key, a random salt and PBKDF2-HMAC-SHA256 at 200,000 iterations. The archive is created with owner-only permissions. The password is used for the operation, then cleared from the form; it is not stored in profile JSON, Keychain, logs or the filename. There is no password recovery. Anyone with the file and password can use included sessions until the provider expires or revokes them.
+
+Restore decrypts and validates before writing, refuses an existing website-store ID, and adds the imported profile beside existing profiles. Temporary restore staging contains decrypted website data in owner-only local directories. A recovery journal lets SubFuse complete or roll back an interrupted restore before ordinary store cleanup; staging is removed after completion. The file you selected remains where you put it. Delete copies you no longer need.

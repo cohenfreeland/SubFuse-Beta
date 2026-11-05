@@ -1,5 +1,14 @@
 # Release notes
 
+## 0.15 — portable session archives
+
+- Copy one local profile to a password-protected `.subfuse` file, then restore it beside existing profiles on another Mac.
+- Include all saved subscriptions, usage, costs and renewals, plus the profile’s remembered Claude/Cursor website stores. ChatGPT and Gemini still use the destination Mac’s signed-in desktop apps.
+- Reject wrong passwords, changed files, unsafe paths and existing sign-in collisions before restoring data. Recover interrupted restores before website-store cleanup.
+- Require SubFuse to be idle. If a selected website store was used this launch, quit/reopen before exporting; turn off scheduled refresh first.
+- No SubFuse account, upload, saved password or sync. Anyone with the file and password can use its sessions, and providers can expire them.
+- Validated with synthetic store round trips and an isolated WebKit marker on macOS 27.2; live provider sessions have not been transferred between two Macs in release testing.
+
 ## 0.14.1 — Antigravity background startup
 
 - Update usage and Refresh all now open Antigravity in the background if needed, wait for its local account service, and refresh usage.

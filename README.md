@@ -2,7 +2,7 @@
 <h1 align="center">SubFuse Beta</h1>
 <p align="center"><strong>Your AI subscriptions. One clear view.</strong><br>Usage, costs, and renewals together on your Mac.</p>
 <p align="center"><strong>Currently compatible with Claude, ChatGPT, Cursor, and Gemini via Antigravity.</strong><br>Free download · Apple Silicon · macOS 14 or later · Proprietary software</p>
-<p align="center"><a href="https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.14.1">Download SubFuse Beta 0.14.1</a> · <a href="https://github.com/cohenfreeland/SubFuse-Beta/issues">Report a problem</a> · <a href="PRIVACY.md">Privacy</a></p>
+<p align="center"><a href="https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.15">Download SubFuse Beta 0.15</a> · <a href="https://github.com/cohenfreeland/SubFuse-Beta/issues">Report a problem</a> · <a href="PRIVACY.md">Privacy</a></p>
 
 SubFuse Beta is a native Mac app for people juggling multiple AI subscriptions. See how much allowance remains, when usage resets, and what you spend each month. Give each subscription a useful name, keep accounts organized in local profiles, and plan upcoming payments in a calendar.
 
@@ -19,8 +19,22 @@ SubFuse Beta is a native Mac app for people juggling multiple AI subscriptions. 
 - **Track your spending** with manually entered amounts and currencies. Different currencies stay separate.
 - **Plan renewals and trials** with a calendar and optional Mac notifications.
 - **Remember Claude and Cursor sign-ins** in separate website sessions for your local profiles and accounts.
+- **Copy a profile to another Mac** with a password-protected file that includes saved subscriptions and remembered Claude/Cursor website sessions. This is not sync.
 - **Choose light, dark, or system appearance.**
 - **Update inside the app** using **SubFuse Beta → Check for Updates…** or **Settings → App updates**.
+
+## Copy a profile to another Mac
+
+In **Profile**, choose **Copy to another Mac…** beside a saved profile. Choose where to save the `.subfuse` file, then enter and confirm a password. Copy that file yourself. On the destination Mac, create or open a local SubFuse profile, choose **Profile → Restore from another Mac…**, select the file and enter its password.
+
+- The file includes that one profile’s subscriptions, saved usage readings, costs and renewal dates, plus its remembered **Claude and Cursor website sessions**. Other profiles and their website data are left out.
+- **ChatGPT and Gemini** subscriptions come back as saved rows. Their usage still refreshes through the ChatGPT and Antigravity desktop apps signed in on the destination Mac.
+- The restored profile is added beside existing profiles without switching to it. A sign-in already on that Mac is never overwritten; SubFuse reports the collision instead.
+- A provider can expire or revoke a session or ask you to sign in again. A live Claude/Cursor session transfer between two Macs has not yet been verified; release testing used synthetic stores and an isolated WebKit cookie marker.
+
+SubFuse must be idle, with scans, refreshes and connection windows finished. If the selected website sessions were used during this launch, turn off scheduled refresh, quit and reopen SubFuse, then copy before refreshing. This lets WebKit finish saving its data.
+
+The archive is encrypted and website data is limited to 200 MB. SubFuse does not upload the file or store its password, and there is no password recovery. **Anyone with both the file and password can use its included sessions.** Keep them secure and separate. A wrong password or changed file restores nothing. This is a file you copy yourself, **not sync**.
 
 ## Supported providers
 
@@ -35,7 +49,7 @@ These four providers are supported. Ordinary ChatGPT chat-message limits and Gem
 
 ## Install on your Mac
 
-1. Download **SubFuse-Beta-0.14.1-macOS-arm64.zip** from the [0.14.1 release](https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.14.1). GitHub's automatic “Source code” downloads contain this public documentation, not the application.
+1. Download **SubFuse-Beta-0.15-macOS-arm64.zip** from the [0.15 release](https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.15). GitHub's automatic “Source code” downloads contain this public documentation, not the application.
 2. Unzip it and move **SubFuse Beta.app** into **Applications** before opening it.
 3. Open the app, choose **Sign in**, and create a local profile. This profile lives on your Mac; it is not a cloud account.
 4. Choose **Add subscription**, select Claude, ChatGPT, Cursor, or Gemini, and follow the connection steps.
@@ -93,7 +107,7 @@ Usage refresh is separate from the app-update checks described here.
 
 Version 0.9 and later include the built-in updater. It checks GitHub for updates while the app is running; automatic checks can be turned off in Settings. You choose when to download, install, and restart. Update packages are verified with SubFuse's signing key before extraction. These update signatures are separate from Apple's notarization.
 
-If you use 0.8 or earlier, install 0.14.1 once manually to get the updater. Quit the old app before replacing it. Existing saved profiles carry forward automatically. Keep one installed copy in Applications for future updates.
+If you use 0.8 or earlier, install 0.15 once manually to get the updater. Quit the old app before replacing it. Existing saved profiles carry forward automatically. Keep one installed copy in Applications for future updates.
 
 ## A few things to know during the beta
 

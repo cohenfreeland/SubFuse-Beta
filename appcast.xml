@@ -4,24 +4,28 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>SubFuse Beta</title>
         <item>
-            <title>0.14</title>
-            <pubDate>Wed, 04 Nov 2026 11:31:00 +1300</pubDate>
+            <title>0.14.1</title>
+            <pubDate>Thu, 05 Nov 2026 13:18:01 +1300</pubDate>
             <link>https://github.com/cohenfreeland/SubFuse-Beta</link>
-            <sparkle:version>23</sparkle:version>
-            <sparkle:shortVersionString>0.14</sparkle:shortVersionString>
+            <sparkle:version>24</sparkle:version>
+            <sparkle:shortVersionString>0.14.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[<!doctype html>
-<html lang="en"><meta charset="utf-8"><title>SubFuse Beta 0.14</title>
-<h2>A dark look for Saved usage</h2>
-<p>All three macOS widget sizes now share the dashboard’s Fuse mark, charcoal surfaces, provider icons, and violet allowance bars. The small widget gives a single current reading more room. Expired or unavailable readings have a dashed track.</p>
-<p>To add a widget, Control-click the desktop, choose <strong>Edit Widgets</strong>, search for <strong>SubFuse</strong>, and add <strong>Saved usage</strong>.</p>
-</html>
+            <description><![CDATA[<!doctype html><html><head><meta charset="utf-8"><title>SubFuse Beta 0.14.1</title></head><body>
+<h2>Antigravity refresh starts the app for you</h2>
+<ul>
+<li>Update usage and Refresh all now open Antigravity in the background when needed, wait for its account service, then update usage.</li>
+<li>An already-running Antigravity app is reused. Antigravity remains running after a refresh.</li>
+<li>Startup has a time limit; sign-in, account mismatch, and other failures keep your last saved reading.</li>
+<li>Scheduled refreshes still require Antigravity to be running. Sign in to the matching Google account in Antigravity first.</li>
+</ul>
+<p>Verified with Antigravity 2.29.0 and a Starter Quota account. Requires Apple Silicon and macOS 14 or later. Existing profiles are preserved.</p>
+</body></html>
 ]]></description>
-            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v0.14/SubFuse-Beta-0.14-macOS-arm64.zip" length="2308597" type="application/octet-stream" sparkle:edSignature="518faZfMj2fp7jJGat0SfO+mKzicxctpGz2joNFsziuFb9BIpCs8oqjKaPdubbduvrH5GzjoraIb7mRzObwzDQ=="></enclosure>
+            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v0.14.1/SubFuse-Beta-0.14.1-macOS-arm64.zip" length="2316712" type="application/octet-stream" sparkle:edSignature="xQV9rtiRJRGa9lphvkgt4dioXuh8aVOkSq4XqPvZZ6CpcQ41sfwiEZvpJhjT0qnMpnBeMsf/2UleJHfR2zxrCA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: feh5M81gQP61n0C/rt/o9tT2tIM3TaPzLGXZ/2h42cZAwUbojmGbE4bLRShKUS3JVQG3tFC+nBbpFTIe2u+GBQ==
-length: 1814
+edSignature: fviHFFI1xH2JysfLoLiSG3XxWNcSNB4cKKh70cgL6Q3D5bnWO+/UCNTjBLLhZt1EEjAv/SY87twt7x7d4nWhAQ==
+length: 2081
 -->

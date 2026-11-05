@@ -10,6 +10,8 @@ The sandboxed desktop widget reads the active profile’s saved subscription nam
 
 Claude and Cursor sign-ins use persistent WebKit website data stored separately on this Mac. SubFuse isolates sessions by local profile and account. It does not import credentials from Cursor, Claude Desktop, another browser, or the Keychain. ChatGPT collection asks the installed account service for its signed-in identity and allowance readings.
 
+Manual Update usage and Refresh all may open the installed Antigravity desktop app in the background when needed and leave it running afterward. Scheduled refresh does not launch Antigravity. SubFuse does not switch its Google account or bypass sign-in.
+
 Gemini collection discovers the same-user Antigravity desktop service and sends account and quota requests only to loopback addresses on this Mac. Its runtime CSRF token stays in memory and is never stored in profile JSON or logged. SubFuse does not import Google OAuth credentials, browser cookies, or Keychain data. Antigravity manages its own Google authentication and may contact its provider to refresh quotas. Account matching uses a provider-specific hash of the normalized email reported by the service; the account display label is stored locally. An email change requires a new subscription, and reassigned organizational emails cannot be distinguished. Removing a Gemini subscription or deleting a local profile does not sign out of Antigravity.
 
 Connecting or refreshing sends account and usage requests to the relevant provider using its normal authentication. Those providers apply their own privacy policies. SubFuse does not read conversations or start AI tasks to measure usage.

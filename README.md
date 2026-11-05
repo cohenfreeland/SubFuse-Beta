@@ -2,7 +2,7 @@
 <h1 align="center">SubFuse Beta</h1>
 <p align="center"><strong>Your AI subscriptions. One clear view.</strong><br>Usage, costs, and renewals together on your Mac.</p>
 <p align="center"><strong>Currently compatible with Claude, ChatGPT, Cursor, and Gemini via Antigravity.</strong><br>Free download · Apple Silicon · macOS 14 or later · Proprietary software</p>
-<p align="center"><a href="https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.14">Download SubFuse Beta 0.14</a> · <a href="https://github.com/cohenfreeland/SubFuse-Beta/issues">Report a problem</a> · <a href="PRIVACY.md">Privacy</a></p>
+<p align="center"><a href="https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.14.1">Download SubFuse Beta 0.14.1</a> · <a href="https://github.com/cohenfreeland/SubFuse-Beta/issues">Report a problem</a> · <a href="PRIVACY.md">Privacy</a></p>
 
 SubFuse Beta is a native Mac app for people juggling multiple AI subscriptions. See how much allowance remains, when usage resets, and what you spend each month. Give each subscription a useful name, keep accounts organized in local profiles, and plan upcoming payments in a calendar.
 
@@ -12,7 +12,7 @@ SubFuse Beta is a native Mac app for people juggling multiple AI subscriptions. 
 
 - **See remaining usage** across supported accounts, with reset times and clear indicators when readings need a refresh.
 - **Check saved usage on your desktop** with a small, medium, or large widget. Select a subscription to open its details in SubFuse.
-- **Refresh with one click** using remembered Claude and Cursor sign-ins, with connection steps shown only when needed.
+- **Refresh with one click** using remembered Claude and Cursor sign-ins, with connection steps shown only when needed. Antigravity opens in the background for manual refresh when required.
 - **Refresh all subscriptions** from the top-right status pill. Successful accounts update even when another needs attention.
 - **Refresh usage automatically** every 5, 15, 30, or 60 minutes while SubFuse is running, with optional settings for each local profile.
 - **Keep multiple accounts together**, with custom names and the provider's plan shown separately.
@@ -29,14 +29,13 @@ SubFuse Beta is a native Mac app for people juggling multiple AI subscriptions. 
 | Claude | Available session, weekly, and model-specific allowance windows | Sign in through SubFuse's connection window and select your workspace |
 | ChatGPT | The Work / Codex allowance pool, with the usage windows your account reports | The ChatGPT/Codex desktop app installed and signed in to the matching account |
 | Cursor | Included usage reported by your account dashboard, including supported unified subscriptions | Sign in through SubFuse; use **Grok / unified sign-in** when your account uses that dashboard |
-
-| Gemini via Antigravity | Allowance pools and resets reported by Antigravity, including model families when supplied | Keep Antigravity running and signed in to the matching Google account |
+| Gemini via Antigravity | Allowance pools and resets reported by Antigravity, including model families when supplied | Install Antigravity and sign in to the matching Google account; manual refresh opens it if needed |
 
 These four providers are supported. Ordinary ChatGPT chat-message limits and Gemini consumer-chat/API limits are not included. Unified Cursor usage may be shared with other eligible products; it is not a Cursor-only activity meter. Some accounts do not expose allowance readings, in which case SubFuse shows **Unavailable**.
 
 ## Install on your Mac
 
-1. Download **SubFuse-Beta-0.14-macOS-arm64.zip** from the [0.14 release](https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.14). GitHub's automatic “Source code” downloads contain this public documentation, not the application.
+1. Download **SubFuse-Beta-0.14.1-macOS-arm64.zip** from the [0.14.1 release](https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.14.1). GitHub's automatic “Source code” downloads contain this public documentation, not the application.
 2. Unzip it and move **SubFuse Beta.app** into **Applications** before opening it.
 3. Open the app, choose **Sign in**, and create a local profile. This profile lives on your Mac; it is not a cloud account.
 4. Choose **Add subscription**, select Claude, ChatGPT, Cursor, or Gemini, and follow the connection steps.
@@ -60,19 +59,19 @@ If macOS can’t provide shared storage, the widget reads the saved SubFuse prof
 
 ## Refresh your subscriptions
 
-Choose **Update usage** in a subscription to get a fresh reading. Claude and Cursor first try the remembered account in the background; their connection window opens only if that attempt needs help. ChatGPT uses the matching account signed in to the desktop app. Gemini uses the matching account in the running Antigravity desktop app.
+Choose **Update usage** in a subscription to get a fresh reading. Claude and Cursor first try the remembered account in the background; their connection window opens only if that attempt needs help. ChatGPT uses the matching account signed in to the desktop app. Gemini uses the matching account in Antigravity. Update usage and Refresh all open Antigravity in the background if needed, wait for its account service, then update the reading.
 
 Click **Refresh all** in the top-right status pill to try every subscription in the current profile. SubFuse saves the readings it can get and skips accounts needing input, without interrupting you with sign-in windows. If any fail, it says **Not all subscriptions could be refreshed.** Open an affected subscription and choose **Update usage** to reconnect. Failed updates preserve the last saved reading.
 
 ## Connect Gemini through Antigravity
 
-Open Antigravity and sign in to your Google account, then choose **Add subscription → Gemini → Connect subscription** in SubFuse. Keep Antigravity running for individual, bulk, and optional background refreshes. If multiple distinct accounts are running, leave the intended one open and retry.
+Open Antigravity and sign in to your Google account, then choose **Add subscription → Gemini → Connect subscription** in SubFuse. Update usage and Refresh all now open Antigravity in the background if needed and wait for it to be ready. An already-running instance is reused, and Antigravity stays running afterward. Scheduled refreshes require Antigravity to be running. If multiple distinct accounts are running, leave the intended one open and retry.
 
 Gemini supports custom names, manual costs/currencies, renewals, trials, calendar reminders, and **Nothing’s changed**, just like the other subscriptions. You can save multiple accounts; the matching account must be active in Antigravity to refresh each one. Failed or mismatched updates keep the previous reading.
 
 The bars represent Antigravity allowances, including other model families when reported, rather than Gemini consumer-chat/API limits or a separate Claude subscription. Missing data stays unavailable; older versions may return cached readings. **Checked Antigravity** is the time SubFuse checked the service, not an upstream measurement timestamp. Relative reset descriptions are shown as **At last check**; only explicit reset dates can trigger an expired-reset indicator.
 
-**Verified live with Antigravity 2.28.2 and a Starter Quota account.** Both allowance pools matched Antigravity, refresh worked, and the saved subscription survived restarting SubFuse. Version 0.12.1 repairs connections to its standalone HTTP runtime while retaining verified-process, loopback, and account safeguards. Other versions, plans, and enterprise/project-specific entitlements remain unverified; the internal desktop interface can change. Account matching uses a hash of the reported email: an email change needs a new subscription, and a reassigned organizational email cannot be distinguished.
+**Automatic startup verified live with Antigravity 2.29.0 and a Starter Quota account.** Starting from a fully closed Antigravity app, Update usage opened it and refreshed both allowance pools. Earlier integration checks used Antigravity 2.28.2 and included restarting SubFuse. Version 0.12.1 repairs connections to its standalone HTTP runtime while retaining verified-process, loopback, and account safeguards. Other versions, plans, and enterprise/project-specific entitlements remain unverified; the internal desktop interface can change. Account matching uses a hash of the reported email: an email change needs a new subscription, and a reassigned organizational email cannot be distinguished.
 
 SubFuse does not own a Google sign-in. Removing Gemini or deleting a local profile does not sign out of Antigravity or cancel your plan; **Forget sign-in** applies to Claude and Cursor website sessions.
 
@@ -82,7 +81,7 @@ Open **Settings → Background usage refresh** and turn on **Automatically refre
 
 Enabling starts a quiet refresh when idle. It continues while SubFuse is running, even when another app has focus. It pauses when your Mac sleeps and stops when you quit SubFuse. Returning after missed intervals makes at most one overdue attempt; it does not replay them all or wake your Mac. Timing is approximate, and repeated failures retry less often.
 
-Only the active profile is refreshed. Manual refreshes and connection windows take precedence. Automatic refresh never opens a sign-in window; successful accounts update and failed accounts keep their previous readings. Settings shows the last attempt, how many subscriptions refreshed, and the last fully successful refresh. Open an affected subscription and choose **Update usage** to reconnect.
+Only the active profile is refreshed. Manual refreshes and connection windows take precedence. Automatic refresh never opens a sign-in window or launches Antigravity; successful accounts update and failed accounts keep their previous readings. Settings shows the last attempt, how many subscriptions refreshed, and the last fully successful refresh. Open an affected subscription and choose **Update usage** to reconnect.
 
 Turn the toggle off to stop scheduled and in-progress automatic work. Your selected frequency is retained. Automatic refresh makes periodic requests to your providers; preferences and readings stay on this Mac.
 
@@ -94,7 +93,7 @@ Usage refresh is separate from the app-update checks described here.
 
 Version 0.9 and later include the built-in updater. It checks GitHub for updates while the app is running; automatic checks can be turned off in Settings. You choose when to download, install, and restart. Update packages are verified with SubFuse's signing key before extraction. These update signatures are separate from Apple's notarization.
 
-If you use 0.8 or earlier, install 0.14 once manually to get the updater. Quit the old app before replacing it. Existing saved profiles carry forward automatically. Keep one installed copy in Applications for future updates.
+If you use 0.8 or earlier, install 0.14.1 once manually to get the updater. Quit the old app before replacing it. Existing saved profiles carry forward automatically. Keep one installed copy in Applications for future updates.
 
 ## A few things to know during the beta
 

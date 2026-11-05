@@ -1,5 +1,12 @@
 # Release notes
 
+## 0.14.1 — Antigravity background startup
+
+- Update usage and Refresh all now open Antigravity in the background if needed, wait for its local account service, and refresh usage.
+- An already-running app is reused. Antigravity remains running afterward; scheduled refreshes still require it to be running.
+- Startup has a time limit. Sign-in, account mismatch, and other failures preserve the last saved reading.
+- Verified live with Antigravity 2.29.0 and a Starter Quota account, starting from a fully closed app.
+
 ## 0.14 — Dark desktop widgets
 
 - All three sizes now share the SubFuse dashboard’s purple Fuse mark, charcoal surfaces, and provider icons.

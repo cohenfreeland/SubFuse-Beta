@@ -2,29 +2,29 @@
 IMPORTANT: This file was signed by Sparkle. Any modifications to this file requires re-signing this file with generate_appcast or sign_update! The signed signature will be embedded at the end of this file.
 --><rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
     <channel>
-        <title>SubFuse Beta</title>
+        <title>SubFuse</title>
         <item>
-            <title>0.15</title>
-            <pubDate>Thu, 05 Nov 2026 14:29:33 +1300</pubDate>
+            <title>1.0</title>
+            <pubDate>Mon, 09 Nov 2026 14:38:02 +1300</pubDate>
             <link>https://github.com/cohenfreeland/SubFuse-Beta</link>
-            <sparkle:version>25</sparkle:version>
-            <sparkle:shortVersionString>0.15</sparkle:shortVersionString>
+            <sparkle:version>100</sparkle:version>
+            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[<!doctype html><html><head><meta charset="utf-8"><title>SubFuse Beta 0.15</title></head><body>
-<h2>Copy a profile to another Mac</h2><ul>
-<li>Export a password-protected .subfuse file containing one profile’s saved subscriptions, usage, costs, renewals and remembered Claude/Cursor website sessions.</li>
-<li>Restore beside existing profiles without switching profiles or overwriting existing sign-ins. Wrong passwords, changed files and collisions restore nothing.</li>
-<li>ChatGPT and Gemini still use the destination Mac’s signed-in ChatGPT and Antigravity desktop apps. Providers can expire a website session.</li>
-<li>No upload, saved password, account or sync. Anyone with the file and password can use its sessions. Website data is limited to 200 MB.</li></ul>
-<p>SubFuse must be idle. If a selected website session was used this launch, turn off scheduled refresh, quit/reopen and copy before refreshing.</p>
-<p>Validated with synthetic stores and an isolated WebKit marker on macOS 27.2. Live provider sign-ins have not yet been transferred between two Macs in testing.</p>
-<p>Requires Apple Silicon and macOS 14 or later. Existing profiles are preserved.</p></body></html>
-]]></description>
-            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v0.15/SubFuse-Beta-0.15-macOS-arm64.zip" length="2406710" type="application/octet-stream" sparkle:edSignature="WcC3CQwQAt9tcLwq9lvprvsegX7ykxgsqLiyxONagacq4QNTkBG2YkS0mzajthYJ2voSqdtGjV5wlIu0y35pCg=="></enclosure>
+            <description><![CDATA[<!doctype html><html><head><meta charset="utf-8"><title>SubFuse 1.0</title></head><body>
+<h2>SubFuse 1.0</h2><p>Your AI subscriptions. One clear view.</p><ul>
+<li>Daily usage history, compact provider graphs and an expandable Home graph.</li>
+<li>Combined Usage with comparable credits, including supported ChatGPT Pro 100 plans.</li>
+<li>Weekly efficiency monitoring and eligible unused-value estimates.</li>
+<li>A cleaner interface with provider accents, matching calendar colours and desktop widgets.</li>
+<li>Separate periodic refresh and daily history controls, plus encrypted profile export with history.</li>
+</ul><p>This updates SubFuse Beta directly. Existing profiles, sign-ins, costs, renewals and refresh settings are retained. History starts with new readings; past usage is not backfilled.</p>
+<p>The installed filename may remain SubFuse Beta.app; the application inside is SubFuse 1.0. Private preview profiles remain separate and can be exported/restored explicitly.</p>
+<p>Requires Apple Silicon and macOS 14 or later. Ad hoc signed; not Apple-notarized.</p></body></html>]]></description>
+            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v1.0/SubFuse-1.0-macOS-arm64.zip" length="2942115" type="application/octet-stream" sparkle:edSignature="63Vka6GwVYNl0OJLPm1oGg6dQVp1qFw4YVAv7GnaA0f6iM4qpRphFsaoMCgOK81xXEf06gPH+pg4mkKDSdgOCA=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: JXnjly+Bn4SkLKRv0jQ1CeCx5EQ35790evNxu5UXjAy7oo/XsL+4FsPbf/Kjk/eldjzTvkrd358EiGj4XRoKDw==
-length: 2456
+edSignature: BUPJavNgyGTGbhc/Jh1IGud5GYkcBs/xlCZeDScEiwcupWbsdJxXrjC/O1vS5+nRdxH84HhK19GSQQtv5YeQCQ==
+length: 2346
 -->

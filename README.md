@@ -1,14 +1,20 @@
-<p align="center"><img src="assets/icon.png" width="110" alt="SubFuse Beta icon"></p>
-<h1 align="center">SubFuse Beta</h1>
+<p align="center"><img src="assets/icon.png" width="110" alt="SubFuse icon"></p>
+<h1 align="center">SubFuse</h1>
 <p align="center"><strong>Your AI subscriptions. One clear view.</strong><br>Usage, costs, and renewals together on your Mac.</p>
 <p align="center"><strong>Currently compatible with Claude, ChatGPT, Cursor, and Gemini via Antigravity.</strong><br>Free download · Apple Silicon · macOS 14 or later · Proprietary software</p>
-<p align="center"><a href="https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.15">Download SubFuse Beta 0.15</a> · <a href="https://github.com/cohenfreeland/SubFuse-Beta/issues">Report a problem</a> · <a href="PRIVACY.md">Privacy</a></p>
+<p align="center"><a href="https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v1.0">Download SubFuse 1.0</a> · <a href="https://github.com/cohenfreeland/SubFuse-Beta/issues">Report a problem</a> · <a href="PRIVACY.md">Privacy</a></p>
 
-SubFuse Beta is a native Mac app for people juggling multiple AI subscriptions. See how much allowance remains, when usage resets, and what you spend each month. Give each subscription a useful name, keep accounts organized in local profiles, and plan upcoming payments in a calendar.
+SubFuse is a native Mac app for people juggling multiple AI subscriptions. See how much allowance remains, when usage resets, and what you spend each month. Give each subscription a useful name, keep accounts organized in local profiles, and plan upcoming payments in a calendar.
 
-![SubFuse Beta dashboard with illustrative demo data](assets/dashboard.png)
+![SubFuse dashboard with illustrative demo data](assets/dashboard.png)
 
 ## What you can do
+
+- **See usage history at a glance**, with compact provider graphs, a clean expandable total graph, and rolling week, month, six-month and year views on Home.
+- **Compare observed usage** in Combined Usage with monthly, six-month and yearly views. Credits normalize supported weekly allowances: 100 credits represent one base-plan allowance. They are not provider tokens or money.
+- **Review subscription efficiency**, including observed used and unused allowance and eligible unused-value estimates for completed weekly periods. Incomplete history and unsupported plans stay explicitly unavailable.
+- **Build daily history** with a separate 9 AM collection task, with pause and removal controls in Settings. Manual refresh also records observations; periodic background refresh keeps current bars fresh.
+- **Keep the interface focused**, with three-dot subscription settings, brand-coloured accents and widgets, and matching renewal colours in the calendar.
 
 - **See remaining usage** across supported accounts, with reset times and clear indicators when readings need a refresh.
 - **Check saved usage on your desktop** with a small, medium, or large widget. Select a subscription to open its details in SubFuse.
@@ -21,13 +27,23 @@ SubFuse Beta is a native Mac app for people juggling multiple AI subscriptions. 
 - **Remember Claude and Cursor sign-ins** in separate website sessions for your local profiles and accounts.
 - **Copy a profile to another Mac** with a password-protected file that includes saved subscriptions and remembered Claude/Cursor website sessions. This is not sync.
 - **Choose light, dark, or system appearance.**
-- **Update inside the app** using **SubFuse Beta → Check for Updates…** or **Settings → App updates**.
+- **Update inside the app** using **SubFuse → Check for Updates…** or **Settings → App updates**.
+
+## Upgrading from SubFuse Beta
+
+In Beta 0.9 or later, choose **SubFuse → Check for Updates…** (the menu may still say SubFuse Beta), then install SubFuse 1.0. Profiles, subscriptions, remembered Claude/Cursor sign-ins, costs, renewal settings and background-refresh preferences use the same storage and app identity. Existing widgets keep their identity too. History begins with new readings; past usage is not backfilled.
+
+The updater may keep the existing **SubFuse Beta.app** filename in Applications. The app inside is SubFuse 1.0; check its displayed version. New downloads are named **SubFuse.app**. Keep one installed copy.
+
+Private V2/1.0 previews used separate storage. To retain a preview profile and its history, use its password-protected **Copy to another Mac…** export and restore the file in the full release. This does not overwrite Beta profiles. Provider sessions can expire and may need another sign-in.
+
+The public repository keeps its `SubFuse-Beta` address so installed apps continue receiving updates. The product is now SubFuse.
 
 ## Copy a profile to another Mac
 
 In **Profile**, choose **Copy to another Mac…** beside a saved profile. Choose where to save the `.subfuse` file, then enter and confirm a password. Copy that file yourself. On the destination Mac, create or open a local SubFuse profile, choose **Profile → Restore from another Mac…**, select the file and enter its password.
 
-- The file includes that one profile’s subscriptions, saved usage readings, costs and renewal dates, plus its remembered **Claude and Cursor website sessions**. Other profiles and their website data are left out.
+- The file includes that one profile’s subscriptions, saved usage readings, history, costs and renewal dates, plus its remembered **Claude and Cursor website sessions**. Other profiles and their website data are left out.
 - **ChatGPT and Gemini** subscriptions come back as saved rows. Their usage still refreshes through the ChatGPT and Antigravity desktop apps signed in on the destination Mac.
 - The restored profile is added beside existing profiles without switching to it. A sign-in already on that Mac is never overwritten; SubFuse reports the collision instead.
 - A provider can expire or revoke a session or ask you to sign in again. A live Claude/Cursor session transfer between two Macs has not yet been verified; release testing used synthetic stores and an isolated WebKit cookie marker.
@@ -49,23 +65,23 @@ These four providers are supported. Ordinary ChatGPT chat-message limits and Gem
 
 ## Install on your Mac
 
-1. Download **SubFuse-Beta-0.15-macOS-arm64.zip** from the [0.15 release](https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v0.15). GitHub's automatic “Source code” downloads contain this public documentation, not the application.
-2. Unzip it and move **SubFuse Beta.app** into **Applications** before opening it.
+1. Download **SubFuse-1.0-macOS-arm64.zip** from the [1.0 release](https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v1.0). GitHub's automatic “Source code” downloads contain this public documentation, not the application.
+2. Unzip it and move **SubFuse.app** into **Applications** before opening it.
 3. Open the app, choose **Sign in**, and create a local profile. This profile lives on your Mac; it is not a cloud account.
 4. Choose **Add subscription**, select Claude, ChatGPT, Cursor, or Gemini, and follow the connection steps.
 5. Open a subscription to enter its cost, currency, and renewal date.
 
-**This beta is not Apple-notarized or Developer ID signed.** macOS may initially block it. If you trust this download, first attempt to open it, then go to **System Settings → Privacy & Security → Open Anyway**, and confirm **Open**. See [Apple's opening instructions](https://support.apple.com/en-us/102445). Do not disable Gatekeeper globally. Managed Macs may not allow an exception.
+**This release is not Apple-notarized or Developer ID signed.** macOS may initially block it. If you trust this download, first attempt to open it, then go to **System Settings → Privacy & Security → Open Anyway**, and confirm **Open**. See [Apple's opening instructions](https://support.apple.com/en-us/102445). Do not disable Gatekeeper globally. Managed Macs may not allow an exception.
 
 Intel Macs, Windows, Linux, iPhone, and iPad are not supported.
 
 ## Saved usage widget
 
-Open the macOS widget gallery and add **SubFuse Beta → Saved usage**. Small shows the subscription in your active profile whose reading most needs attention. Medium and Large show more subscriptions in the same order. Select a subscription to open its detail sheet.
+Open the macOS widget gallery and add **SubFuse → Saved usage**. Small shows the subscription in your active profile whose reading most needs attention. Medium and Large show more subscriptions in the same order. Select a subscription to open its detail sheet.
 
-The dark widgets use the dashboard’s Fuse mark, provider icons, and violet bars to show how much allowance remains. A dashed track marks expired or unavailable readings. The small widget gives a single current reading more space.
+The dark widgets use the dashboard’s Fuse mark, provider icons, and provider-coloured bars to show how much allowance remains. A dashed track marks expired or unavailable readings. The small widget gives a single current reading more space.
 
-![Small, medium, and large dark SubFuse widgets showing sample subscriptions](assets/saved-usage-widgets.png)
+![SubFuse desktop widget with illustrative sample subscriptions](assets/saved-usage-widgets.png)
 
 The widget reads usage already saved by the app. A freshness dot can change while SubFuse is closed, and a reading becomes **Outdated Data** when its saved reset time passes. Open the app to refresh the reading.
 
@@ -99,7 +115,15 @@ Only the active profile is refreshed. Manual refreshes and connection windows ta
 
 Turn the toggle off to stop scheduled and in-progress automatic work. Your selected frequency is retained. Automatic refresh makes periodic requests to your providers; preferences and readings stay on this Mac.
 
-![Background usage refresh settings, off by default](assets/background-refresh.png)
+![SubFuse settings with separate background refresh and daily history controls](assets/background-refresh.png)
+
+## History, credits and efficiency
+
+History uses comparable provider readings rather than a continuous activity log. A first reading establishes a baseline. Missing observations, unknown resets, counter decreases and plan changes create gaps; they are not treated as zero. Credits compare allowance consumption using supported plan multipliers, not identical computing power across providers. ChatGPT Pro 100 is supported at 10×.
+
+Efficiency estimates require usable weekly observations. Monetary estimates additionally require a known, stable manually entered price and an eligible allowance pool; they are not billing records or promised savings. Separate currencies remain separate. See the [FAQ](https://subfuse.cohenfreeland.chatgpt.site/faq.html) for calculation details.
+
+Daily history collection is separate from periodic background refresh. SubFuse registers a macOS task for 9 AM local time that can launch it quietly while closed. Collection requires a logged-in Mac and available sessions/services, does not wake the Mac, and can be delayed by sleep. Settings can pause collection or remove the task; reopening registers the task again, while a saved pause stays in effect. Missed data is not backfilled.
 
 ## Staying up to date
 
@@ -107,15 +131,15 @@ Usage refresh is separate from the app-update checks described here.
 
 Version 0.9 and later include the built-in updater. It checks GitHub for updates while the app is running; automatic checks can be turned off in Settings. You choose when to download, install, and restart. Update packages are verified with SubFuse's signing key before extraction. These update signatures are separate from Apple's notarization.
 
-If you use 0.8 or earlier, install 0.15 once manually to get the updater. Quit the old app before replacing it. Existing saved profiles carry forward automatically. Keep one installed copy in Applications for future updates.
+If you use 0.8 or earlier, install 1.0 manually to get the updater. Quit the old app before replacing it. Existing saved profiles carry forward automatically. Keep one installed copy in Applications for future updates.
 
-## A few things to know during the beta
+## A few things to know
 
 Usage is a saved snapshot, not a continuous live meter. Choose **Update usage** for a fresh reading. **Nothing's changed** confirms that you have not used an account since its last reading; it does not contact the provider. After a reset passes, update the account before relying on the bar.
 
 Costs, billing dates, and trial dates are entered by you. SubFuse does not collect invoices, process payments, cancel subscriptions, or purchase credits. Calendar entries are estimates based on your schedule. On-demand spend and usage credits are not treated as included quota.
 
-Provider websites and local account services can change. A connection failure keeps the last saved reading. This beta is still evolving, and not every plan or workspace has been tested with a live account.
+Provider websites and local account services can change. A connection failure keeps the last saved reading. Not every plan or workspace has been tested with a live account.
 
 ## Your data stays under your control
 
@@ -127,6 +151,6 @@ Local profiles help organize accounts; they are not password-protected security 
 
 [Open an issue](https://github.com/cohenfreeland/SubFuse-Beta/issues/new/choose) with your app version, macOS version, provider, and steps to reproduce. Remove account emails, cookies, tokens, and personal information from screenshots and logs.
 
-SubFuse Beta is free to download and use, with proprietary source code. This public repository holds product documentation and release information only. See [LICENSE](LICENSE) and [third-party notices](THIRD-PARTY-NOTICES.txt).
+SubFuse is free to download and use, with proprietary source code. This public repository holds product documentation and release information only. See [LICENSE](LICENSE) and [third-party notices](THIRD-PARTY-NOTICES.txt).
 
 SubFuse is an independent project and is not affiliated with or endorsed by Anthropic, OpenAI, Google, Cursor, or xAI. Product names belong to their respective owners.

@@ -1,5 +1,17 @@
 # Release notes
 
+## 1.0 — SubFuse
+
+- The full SubFuse release succeeds SubFuse Beta, using the existing updater and preserving profiles, remembered sign-ins, costs, renewals, refresh preferences and widget identity.
+- Add daily usage history, compact subscription graphs, an expandable Home graph and Combined Usage with comparable credits. Include supported ChatGPT Pro 100 mapping.
+- Review weekly allowance efficiency and eligible unused-value estimates, with gaps and unsupported data kept explicit.
+- Refine the dark interface, provider accents, renewal colours and desktop widgets; keep details in each subscription's three-dot settings.
+- Retain periodic background refresh and add a separate daily history task with pause/removal controls.
+- Carry history in encrypted portable profile files. Private preview data remains separate and can be explicitly exported/restored.
+- Includes the audited history, scheduling, storage validation and session-lifetime fixes from the completed private version.
+
+Existing Beta 0.9+ users can choose **Check for Updates…**. History starts with fresh readings; past activity cannot be reconstructed. Requires Apple Silicon and macOS 14+. The app is ad hoc signed, not Apple Developer ID signed or notarized.
+
 ## 0.15 — portable session archives
 
 - Copy one local profile to a password-protected `.subfuse` file, then restore it beside existing profiles on another Mac.

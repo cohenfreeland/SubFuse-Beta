@@ -1,5 +1,12 @@
 # Release notes
 
+## 1.0.1 — Automatic refresh fix
+
+- Keep the selected automatic refresh frequency when some subscriptions update successfully. One unavailable account no longer stretches a 15-minute schedule to an hour for everyone.
+- Recover automatically from the longer delay saved by 1.0, without toggling the feature or resetting settings.
+- Keep partial failures visible and preserve failed readings and timestamps. Retry less often when no subscriptions can refresh.
+- Preserve profiles, remembered sign-ins, widgets, manual refresh and daily history collection.
+
 ## 1.0 — SubFuse
 
 - The full SubFuse release succeeds SubFuse Beta, using the existing updater and preserving profiles, remembered sign-ins, costs, renewals, refresh preferences and widget identity.

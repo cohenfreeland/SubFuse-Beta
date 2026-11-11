@@ -2,7 +2,7 @@
 <h1 align="center">SubFuse</h1>
 <p align="center"><strong>Your AI subscriptions. One clear view.</strong><br>Usage, costs, and renewals together on your Mac.</p>
 <p align="center"><strong>Currently compatible with Claude, ChatGPT, Cursor, and Gemini via Antigravity.</strong><br>Free download · Apple Silicon · macOS 14 or later · Proprietary software</p>
-<p align="center"><a href="https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v1.0">Download SubFuse 1.0</a> · <a href="https://github.com/cohenfreeland/SubFuse-Beta/issues">Report a problem</a> · <a href="PRIVACY.md">Privacy</a></p>
+<p align="center"><a href="https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v1.0.1">Download SubFuse 1.0.1</a> · <a href="https://github.com/cohenfreeland/SubFuse-Beta/issues">Report a problem</a> · <a href="PRIVACY.md">Privacy</a></p>
 
 SubFuse is a native Mac app for people juggling multiple AI subscriptions. See how much allowance remains, when usage resets, and what you spend each month. Give each subscription a useful name, keep accounts organized in local profiles, and plan upcoming payments in a calendar.
 
@@ -31,9 +31,9 @@ SubFuse is a native Mac app for people juggling multiple AI subscriptions. See h
 
 ## Upgrading from SubFuse Beta
 
-In Beta 0.9 or later, choose **SubFuse → Check for Updates…** (the menu may still say SubFuse Beta), then install SubFuse 1.0. Profiles, subscriptions, remembered Claude/Cursor sign-ins, costs, renewal settings and background-refresh preferences use the same storage and app identity. Existing widgets keep their identity too. History begins with new readings; past usage is not backfilled.
+In Beta 0.9 or later, choose **SubFuse → Check for Updates…** (the menu may still say SubFuse Beta), then install SubFuse 1.0.1. Profiles, subscriptions, remembered Claude/Cursor sign-ins, costs, renewal settings and background-refresh preferences use the same storage and app identity. Existing widgets keep their identity too. History begins with new readings; past usage is not backfilled.
 
-The updater may keep the existing **SubFuse Beta.app** filename in Applications. The app inside is SubFuse 1.0; check its displayed version. New downloads are named **SubFuse.app**. Keep one installed copy.
+The updater may keep the existing **SubFuse Beta.app** filename in Applications. The app inside is SubFuse 1.0.1; check its displayed version. New downloads are named **SubFuse.app**. Keep one installed copy.
 
 Private V2/1.0 previews used separate storage. To retain a preview profile and its history, use its password-protected **Copy to another Mac…** export and restore the file in the full release. This does not overwrite Beta profiles. Provider sessions can expire and may need another sign-in.
 
@@ -65,7 +65,7 @@ These four providers are supported. Ordinary ChatGPT chat-message limits and Gem
 
 ## Install on your Mac
 
-1. Download **SubFuse-1.0-macOS-arm64.zip** from the [1.0 release](https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v1.0). GitHub's automatic “Source code” downloads contain this public documentation, not the application.
+1. Download **SubFuse-1.0.1-macOS-arm64.zip** from the [1.0.1 release](https://github.com/cohenfreeland/SubFuse-Beta/releases/tag/v1.0.1). GitHub's automatic “Source code” downloads contain this public documentation, not the application.
 2. Unzip it and move **SubFuse.app** into **Applications** before opening it.
 3. Open the app, choose **Sign in**, and create a local profile. This profile lives on your Mac; it is not a cloud account.
 4. Choose **Add subscription**, select Claude, ChatGPT, Cursor, or Gemini, and follow the connection steps.
@@ -109,7 +109,7 @@ SubFuse does not own a Google sign-in. Removing Gemini or deleting a local profi
 
 Open **Settings → Background usage refresh** and turn on **Automatically refresh this profile**. Choose **5, 15, 30, or 60 minutes**. The feature is off by default, with 15 minutes selected, and each local profile remembers its own choice.
 
-Enabling starts a quiet refresh when idle. It continues while SubFuse is running, even when another app has focus. It pauses when your Mac sleeps and stops when you quit SubFuse. Returning after missed intervals makes at most one overdue attempt; it does not replay them all or wake your Mac. Timing is approximate, and repeated failures retry less often.
+Enabling starts a quiet refresh when idle. It continues while SubFuse is running, even when another app has focus. It pauses when your Mac sleeps and stops when you quit SubFuse. Returning after missed intervals makes at most one overdue attempt; it does not replay them all or wake your Mac. Timing is approximate. If no subscriptions can refresh, repeated failures retry less often. Partial failures keep your selected frequency, so one unavailable subscription does not delay working accounts. Version 1.0.1 also corrects the longer delay saved by version 1.0 automatically.
 
 Only the active profile is refreshed. Manual refreshes and connection windows take precedence. Automatic refresh never opens a sign-in window or launches Antigravity; successful accounts update and failed accounts keep their previous readings. Settings shows the last attempt, how many subscriptions refreshed, and the last fully successful refresh. Open an affected subscription and choose **Update usage** to reconnect.
 

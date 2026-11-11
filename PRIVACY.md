@@ -16,7 +16,7 @@ Gemini collection discovers the same-user Antigravity desktop service and sends 
 
 Connecting or refreshing sends account and usage requests to the relevant provider using its normal authentication. Those providers apply their own privacy policies. SubFuse does not read conversations or start AI tasks to measure usage.
 
-Background usage refresh is off by default. When enabled for a local profile, SubFuse periodically makes the same provider requests while the app is running, including when it is not focused. You choose 5, 15, 30, or 60 minutes; timing can be delayed by sleep, ongoing operations, or retry backoff. Only the active profile is refreshed. Disabling the setting, signing out, or quitting stops automatic refresh. No new analytics or SubFuse server is involved.
+Background usage refresh is off by default. When enabled for a local profile, SubFuse periodically makes the same provider requests while the app is running, including when it is not focused. You choose 5, 15, 30, or 60 minutes; timing can be delayed by sleep or ongoing operations. From version 1.0.1, retry backoff applies when no subscriptions can refresh; partial failures keep the selected frequency. Only the active profile is refreshed. Disabling the setting, signing out, or quitting stops automatic refresh. No new analytics or SubFuse server is involved.
 
 Checking for updates contacts GitHub to retrieve the appcast; downloading an update contacts GitHub's release hosting. Those services can receive standard network information such as your IP address and request headers. No saved profile, subscription, or billing data is included in the update feed request. Sparkle system profiling is disabled.
 

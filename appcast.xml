@@ -4,27 +4,29 @@ IMPORTANT: This file was signed by Sparkle. Any modifications to this file requi
     <channel>
         <title>SubFuse</title>
         <item>
-            <title>1.0</title>
-            <pubDate>Mon, 09 Nov 2026 14:38:02 +1300</pubDate>
+            <title>1.0.1</title>
+            <pubDate>Wed, 11 Nov 2026 19:15:41 +1300</pubDate>
             <link>https://github.com/cohenfreeland/SubFuse-Beta</link>
-            <sparkle:version>100</sparkle:version>
-            <sparkle:shortVersionString>1.0</sparkle:shortVersionString>
+            <sparkle:version>101</sparkle:version>
+            <sparkle:shortVersionString>1.0.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[<!doctype html><html><head><meta charset="utf-8"><title>SubFuse 1.0</title></head><body>
-<h2>SubFuse 1.0</h2><p>Your AI subscriptions. One clear view.</p><ul>
-<li>Daily usage history, compact provider graphs and an expandable Home graph.</li>
-<li>Combined Usage with comparable credits, including supported ChatGPT Pro 100 plans.</li>
-<li>Weekly efficiency monitoring and eligible unused-value estimates.</li>
-<li>A cleaner interface with provider accents, matching calendar colours and desktop widgets.</li>
-<li>Separate periodic refresh and daily history controls, plus encrypted profile export with history.</li>
-</ul><p>This updates SubFuse Beta directly. Existing profiles, sign-ins, costs, renewals and refresh settings are retained. History starts with new readings; past usage is not backfilled.</p>
-<p>The installed filename may remain SubFuse Beta.app; the application inside is SubFuse 1.0. Private preview profiles remain separate and can be exported/restored explicitly.</p>
-<p>Requires Apple Silicon and macOS 14 or later. Ad hoc signed; not Apple-notarized.</p></body></html>]]></description>
-            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v1.0/SubFuse-1.0-macOS-arm64.zip" length="2942115" type="application/octet-stream" sparkle:edSignature="63Vka6GwVYNl0OJLPm1oGg6dQVp1qFw4YVAv7GnaA0f6iM4qpRphFsaoMCgOK81xXEf06gPH+pg4mkKDSdgOCA=="></enclosure>
+            <description><![CDATA[<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>SubFuse 1.0.1</title></head><body>
+<h2>Automatic refresh fix</h2>
+<p>SubFuse now keeps your selected automatic refresh frequency when one subscription cannot update. Other accounts continue refreshing on schedule instead of slowing down together.</p>
+<ul>
+<li>Recover automatically from the longer delay saved by SubFuse 1.0, without resetting your settings.</li>
+<li>Continue showing accounts that need attention, while preserving their previous readings.</li>
+<li>Retry less often when no subscriptions can refresh.</li>
+</ul>
+<p>Requires Apple Silicon and macOS 14 or later. Profiles, remembered sign-ins, widgets and update compatibility are preserved.</p>
+</body></html>
+]]></description>
+            <enclosure url="https://github.com/cohenfreeland/SubFuse-Beta/releases/download/v1.0.1/SubFuse-1.0.1-macOS-arm64.zip" length="2942263" type="application/octet-stream" sparkle:edSignature="GvHovbnEWXjNA+QhjLs62F7O2F3pm5KT3LLVOiYO0KSQSICNGExjfZMeegiH+d5H5tMqa44FNLEq4ZJl02ZECg=="></enclosure>
         </item>
     </channel>
 </rss><!-- sparkle-signatures:
-edSignature: BUPJavNgyGTGbhc/Jh1IGud5GYkcBs/xlCZeDScEiwcupWbsdJxXrjC/O1vS5+nRdxH84HhK19GSQQtv5YeQCQ==
-length: 2346
+edSignature: 6oH2McvVFM8wcaKuk15JBrUM1HOBATspJxTfd+bzQYKv53sFym/KPlj+lBoyTfnaElOPLIS0RItkxyjv5Lw1Dw==
+length: 2007
 -->
